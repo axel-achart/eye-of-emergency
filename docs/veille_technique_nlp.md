@@ -10,8 +10,8 @@ Pour chaque notion/méthode, chercher à répondre à ces questions :
 - Sources consultées
 
 **Ressources de cours ajoutées (29/07/2026) :** deux documents fournis par l'école sont maintenant dans le repo et alimentent les sections ci-dessous :
-- `B2_Eye-of-Emergency_Ressources.md.pdf` — liste de ressources classée par question du sujet (repères 🔴 incontournable / 🟡 utile / ⚪ pour aller plus loin).
-- `B2_HowTo_Du-tweet-brut-au-vecteur (1).pdf` — support d'atelier (1h) qui déroule le pipeline nettoyer → tokeniser → normaliser → vectoriser → vérifier sur un tweet réel, avec du code.
+- [`B2_Eye-of-Emergency_Ressources.md.pdf`](consignes/B2_Eye-of-Emergency_Ressources.md.pdf) — liste de ressources classée par question du sujet (repères 🔴 incontournable / 🟡 utile / ⚪ pour aller plus loin).
+- [`B2_HowTo_Du-tweet-brut-au-vecteur.pdf`](consignes/B2_HowTo_Du-tweet-brut-au-vecteur.pdf) — support d'atelier (1h) qui déroule le pipeline nettoyer → tokeniser → normaliser → vectoriser → vérifier sur un tweet réel, avec du code.
 
 Ces documents donnent des sources et des points de vigilance factuels (repris ci-dessous) — mais **pas** les réponses "avantages / limites / pertinence pour ce projet" : ces champs restent à rédiger par toi, avec ton propre raisonnement, pour que la veille garde sa valeur d'exercice.
 
@@ -27,7 +27,7 @@ Ces documents donnent des sources et des points de vigilance factuels (repris ci
 - Stanford IR Book — [Stemming and lemmatization](https://nlp.stanford.edu/IR-book/html/htmledition/stemming-and-lemmatization-1.html)
 - NLTK Book ch.3 (normalisation, ponctuation, Unicode), ch.5 (POS tagging)
 - L'algorithme de Porter (Martin Porter)
-- `B2_HowTo_Du-tweet-brut-au-vecteur.pdf`, étapes 1 à 3 (Nettoyer / Tokeniser / Normaliser)
+- [`B2_HowTo_Du-tweet-brut-au-vecteur.pdf`](consignes/B2_HowTo_Du-tweet-brut-au-vecteur.pdf), étapes 1 à 3 (Nettoyer / Tokeniser / Normaliser)
 
 **Points de vigilance (issus du cours) :**
 - `not`, `no`, `nor` sont dans la stop-list NLTK par défaut : les supprimer rend « not a real fire » identique à « a real fire » — deux classes opposées deviennent indiscernables. À exclure explicitement de la stop-list.
@@ -49,7 +49,7 @@ Ces documents donnent des sources et des points de vigilance factuels (repris ci
 - Stanford IR Book — [tf-idf weighting](https://nlp.stanford.edu/IR-book/html/htmledition/tf-idf-weighting-1.html)
 - `CountVectorizer` / `TfidfVectorizer` (doc API scikit-learn)
 - scikit-learn — tutoriel *Working With Text Data*
-- `B2_HowTo_Du-tweet-brut-au-vecteur.pdf`, étape 4 (Vectoriser)
+- [`B2_HowTo_Du-tweet-brut-au-vecteur.pdf`](consignes/B2_HowTo_Du-tweet-brut-au-vecteur.pdf), étape 4 (Vectoriser)
 
 **Points de vigilance (issus du cours) :**
 - La formule d'idf de scikit-learn diffère de celle des cours théoriques : `idf(t) = ln((1+n)/(1+df(t))) + 1` (lissage activé par défaut) → un mot présent dans tous les documents obtient `idf = 1`, pas `0`.
@@ -118,7 +118,7 @@ Aucune ressource de cours reçue ne couvre cette section pour l'instant (les doc
 2. Vectoriser avant le split train/test → fuite de données, score gonflé et invalide.
 3. Optimiser l'accuracy au lieu du F1 alors que le sujet impose le F1.
 4. Un wordcloud global au lieu d'un wordcloud par classe → aucune information exploitable.
-5. Ne pas refaire l'EDA après le prétraitement (cf. `eda_texte_nlp.md`, étape 5 du HowTo « Vérifier »).
+5. Ne pas refaire l'EDA après le prétraitement (cf. [`eda_texte_nlp.md`](eda_texte_nlp.md), étape 5 du HowTo « Vérifier »).
 6. Choisir stemming ou lemmatisation au feeling au lieu de trancher par un chiffre du GridSearch.
 
 ---

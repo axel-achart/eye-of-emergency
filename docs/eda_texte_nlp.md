@@ -10,12 +10,12 @@ Ce fichier est un canevas de méthode, pas un rapport tout fait : il liste les �
 3. [spaCy](https://spacy.io) (tokenisation, POS, NER, pipelines)
 4. [NLTK Book](https://www.nltk.org/book/) — notamment ch.1 (fréquences, corpus) et ch.3 (Processing Raw Text)
 5. [regex101](https://regex101.com) (tester tes expressions régulières de nettoyage)
-6. `B2_Eye-of-Emergency_Ressources.md.pdf` (ajouté le 29/07/2026) — liste de ressources classée par question du sujet
-7. `B2_HowTo_Du-tweet-brut-au-vecteur (1).pdf` (ajouté le 29/07/2026) — atelier qui déroule un pipeline nettoyer → tokeniser → normaliser → vectoriser → vérifier sur un tweet réel
+6. [`B2_Eye-of-Emergency_Ressources.md.pdf`](consignes/B2_Eye-of-Emergency_Ressources.md.pdf) (ajouté le 29/07/2026) — liste de ressources classée par question du sujet
+7. [`B2_HowTo_Du-tweet-brut-au-vecteur.pdf`](consignes/B2_HowTo_Du-tweet-brut-au-vecteur.pdf) (ajouté le 29/07/2026) — atelier qui déroule un pipeline nettoyer → tokeniser → normaliser → vectoriser → vérifier sur un tweet réel
 
 Une EDA texte suit la même logique qu'une EDA classique (structure → distributions → relations → qualité), mais chaque étape doit être adaptée parce que la donnée est du texte libre, pas des colonnes numériques.
 
-**Comment ce canevas se raccorde au pipeline vu en cours :** le HowTo découpe le travail en Nettoyer → Tokeniser → Normaliser → Vectoriser → Vérifier. Les étapes 4 et 5 ci-dessous correspondent à Nettoyer/Tokeniser et Normaliser ; la Vectorisation (BoW/TF-IDF) est traitée comme notion de modélisation dans `veille_technique_nlp.md` (section 2) plutôt qu'ici ; et « Vérifier » correspond au principe même de ce fichier : refaire l'EDA après le nettoyage (cf. note à l'étape 5 du HowTo, reprise ci-dessous).
+**Comment ce canevas se raccorde au pipeline vu en cours :** le HowTo découpe le travail en Nettoyer → Tokeniser → Normaliser → Vectoriser → Vérifier. Les étapes 4 et 5 ci-dessous correspondent à Nettoyer/Tokeniser et Normaliser ; la Vectorisation (BoW/TF-IDF) est traitée comme notion de modélisation dans [`veille_technique_nlp.md`](veille_technique_nlp.md) (section 2) plutôt qu'ici ; et « Vérifier » correspond au principe même de ce fichier : refaire l'EDA après le nettoyage (cf. note à l'étape 5 du HowTo, reprise ci-dessous).
 
 ---
 
@@ -159,7 +159,7 @@ Questions :
 - 3 constats principaux sur la qualité et la structure du texte
 - Le choix de prétraitement que tu recommandes (nettoyage à garder/jeter, stemming ou lemmatisation) et pourquoi
 - Les pistes de features à tester en priorité pour la suite du projet
-- Ce qui reste incertain et qu'il faudra vérifier avec un scénario de démonstration (cf. `veille_technique_nlp.md`, étape 3)
+- Ce qui reste incertain et qu'il faudra vérifier avec un scénario de démonstration (cf. [`veille_technique_nlp.md`](veille_technique_nlp.md), étape 3)
 
 **Rappel important (issu du cours, étape « Vérifier » du HowTo) : l'EDA de ce fichier doit être menée deux fois.** Une première passe sur le texte brut (étapes 1 à 6 ci-dessus), une seconde après avoir écrit ta fonction `clean()` — pour vérifier que le nettoyage n'a pas effacé le signal qui distingue `target=0` de `target=1` (ex. : wordcloud par classe qui se ressemblent trop, top mots qui ont disparu). C'est explicitement demandé par le sujet et souvent oublié.
 
